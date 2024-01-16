@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Evaluation page</title>
     <link href="qpg.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  </head>
   </head>
   <body>
     <header><h1><a href="#" style="text-decoration: none; color:black;" ><b>Evaluation</b></a></h1>
@@ -20,36 +23,48 @@
         document.getElementById("res").innerHTML = getData;
 
         function onSubmitForm() {
-              var judgeName = document.getElementById("judges").value;
-              var teamName = Name;
-              var q1 = getRadioValue("q1");
-              var q2 = getRadioValue("q2");
-              var q3 = getRadioValue("q3");
-              var q4 = getRadioValue("q4");
-              var q5 = getRadioValue("q5");
-              var q6 = getRadioValue("q6");
-              var q7 = getRadioValue("q7");
-              var q8 = getRadioValue("q8");
-              var q9 = getRadioValue("q9");
-              var q10 = getRadioValue("q10");
+          var judgeName = document.getElementById("judges").value;
+          var teamName = Name;
+          var q1 = getRadioValue("q1");
+          var q2 = getRadioValue("q2");
+          var q3 = getRadioValue("q3");
+          var q4 = getRadioValue("q4");
+          var q5 = getRadioValue("q5");
+          var q6 = getRadioValue("q6");
+          var q7 = getRadioValue("q7");
+          var q8 = getRadioValue("q8");
+          var q9 = getRadioValue("q9");
+          var q10 = getRadioValue("q10");
 
-              // Calculate average
-              var average = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10) / 10;
+          // Calculate sum
+          var sum = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10);
 
-              console.log("Judge Name:", judgeName);
-              console.log("Team Name:", teamName);
-              console.log("Average:", average);
+          console.log("Judge Name:", judgeName);
+          console.log("Team Name:", teamName);
+          console.log("SUM:", sum);
+          submit();
+
+        }
+        const submit = async () => {
+          try{
+            const response = await fetch('http://localhost:4001/submit?', {cache: 'no-cache'});
+            if(response.ok){
+              const jsonResponse = await response.json();
+              renderResponse(jsonResponse);
             }
-
-            function getRadioValue(name) {
-                var radios = document.getElementsByName(name);
-                for (var i = 0; i < radios.length; i++) {
-                    if (radios[i].checked) {
-                        return parseInt(radios[i].value);
-                    }
+          }catch(error){
+            console.log(error)
+          }
+        }
+        function getRadioValue(name) {
+            var radios = document.getElementsByName(name);
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    return parseInt(radios[i].value);
                 }
-                return 0; 
             }
+            return 0; 
+        }
       </script>
     </header>
     <form action="/action_page.php" method="post" onsubmit="onSubmitForm();">

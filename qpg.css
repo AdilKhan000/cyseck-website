@@ -1,0 +1,76 @@
+body 
+{
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    background-color:white;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #061de3, #e306ca);
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 50px;
+}
+
+label 
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+label 
+{
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+form
+{
+    padding-left: 20px;
+    position: relative;
+    font-size:25px;
+    color: white;
+}
+
+.submition
+{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+input[type="submit"]
+{
+    size: 30px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+header 
+{
+    background-color:white;
+    color:black;
+    text-align: center;
+    padding: 1rem;
+    position:cover;
+}
+
+input[type=radio]
+{
+    transform:scale(1.6);
+    
+}
+

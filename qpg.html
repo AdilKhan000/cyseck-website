@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluation page</title>
+    <link href="qpg.css" rel="stylesheet">
+  </head>
+  <body>
+    <header><h1><a href="#" style="text-decoration: none; color:black;" ><b>Evaluation</b></a></h1>
+      <p id="res" style="font-size: 25px;"></p>
+      <script>
+        var data =window.location.search;
+        var params = new URLSearchParams(data);
+        console.log(params);
+        var Name = params.get("Team");
+        var Des = params.get("info");
+        var getData = "<p>"+Name+"</p>";
+            getData += Des;
+        document.getElementById("res").innerHTML = getData;
+
+        function onSubmitForm() {
+              var judgeName = document.getElementById("judges").value;
+              var teamName = Name;
+              var q1 = getRadioValue("q1");
+              var q2 = getRadioValue("q2");
+              var q3 = getRadioValue("q3");
+              var q4 = getRadioValue("q4");
+              var q5 = getRadioValue("q5");
+              var q6 = getRadioValue("q6");
+              var q7 = getRadioValue("q7");
+              var q8 = getRadioValue("q8");
+              var q9 = getRadioValue("q9");
+              var q10 = getRadioValue("q10");
+
+              // Calculate average
+              var average = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10) / 10;
+
+              console.log("Judge Name:", judgeName);
+              console.log("Team Name:", teamName);
+              console.log("Average:", average);
+            }
+
+            function getRadioValue(name) {
+                var radios = document.getElementsByName(name);
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        return parseInt(radios[i].value);
+                    }
+                }
+                return 0; // Default value if no radio button is selected
+            }
+      </script>
+    </header>
+    <form action="/action_page.php" method="post" onsubmit="onSubmitForm();">
+        <br>
+        <label for="Panel members name" style="font-size: 25px;">Panel member name:</label>
+      <select name="judges" id="judges">
+        <option value="-1">Select a Panel Member</option>
+        <option value="1">Sridar Sindhu-CISO, Wells Fargo</option>
+        <option value="2">Visagan Subbarayalu-Sr.Director, Target</option>
+        <option value="3">Seshadri PS-VP, Unisys</option>
+        <option value="4">Hilal Ahmad Lone-CISO, Razorpay</option>
+        <option value="5">KPM Das-Sr.Director, Cisco</option>
+        <option value="6">Athir Ahad-CISO, Wipro</option>
+        <option value="7">JPM Raman-CISO, NA</option>
+        <option value="8">Satish K-CISO, KreditBee</option>
+        <option value="9">Kannan K-CISO, Karnataka Bank</option>
+        <option value="10">Sridhar Govardhan-CISO, COINDCX</option>
+        <option value="11">Sachinraj Shetty-CISO, OLA</option>
+        <option value="12">Venkat Thoutam-CISO, DELL India</option>
+        <option value="13">Kavita Kadambi-CISO, Infosys</option>
+        <option value="14">Dr. Ram Kumar G-CISO, Nissan Motors</option>
+        <option value="15">Shobha Jagatpal-CISO, Morgan Stanley</option>
+        <option value="16">Jacxine Fernandez-CISO, Bangalore intl Airport</option>
+        <option value="17">Mahadesha V-CISO, CeG & Karnataka State</option>
+      </select>
+      <br><br>
+      <form >
+        <p>
+          Category: Traction<br>
+          Criterion: Customers<br>
+          Comment: Customers added: marquee clients? pilots? PoCs? LOIs?
+        </p>
+        <label>
+          <input type="radio" name="q1" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q1" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q1" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q1" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q1" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q1" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q1" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q1" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q1" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Traction<br>
+          Criterion: Revenue<br>
+          Comment: Bookings, Revenue realised, Order in pipeline, ARR etc
+        </p>
+        <label>
+          <input type="radio" name="q2" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q2" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q2" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q2" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q2" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q2" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q2" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q2" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q2" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q2" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Technology<br>
+          Criterion: Problem<br>
+          Comment: Significance and relevance of the problem being solved
+        </p>
+        <label>
+          <input type="radio" name="q3" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q3" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q3" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q3" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q3" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q3" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q3" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q3" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q3" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q3" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Technology<br>
+          Criterion: Solution<br>
+          Comment: Uniqueness of the solution? Depth? IP?
+        </p>
+        <label>
+          <input type="radio" name="q4" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q4" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q4" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q4" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q4" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q4" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q4" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q4" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q4" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q4" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Technology<br>
+          Criterion: Differentiation-USP<br>
+          Comment: How does the solution compare with competitors? Moat?
+        </p>
+        <label>
+          <input type="radio" name="q5" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q5" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q5" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q5" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q5" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q5" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q5" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q5" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q5" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q5" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>Category: Technology<br>
+          Criterion: Competition<br>
+          Comment: Size of the market? Competition?
+        </p>
+        <label>
+          <input type="radio" name="q6" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q6" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q6" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q6" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q6" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q6" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q6" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q6" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q6" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q6" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Team<br>
+          Criterion: Team<br>
+          Comment: Founder background? Overall team's Indsutry expertise - experience, skill, business awareness?
+        </p>
+        <label>
+          <input type="radio" name="q7" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q7" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q7" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q7" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q7" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q7" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q7" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q7" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q7" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q7" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Team<br>
+          Criterion: Recognition<br>
+          Comment: Other validations? Awards? Accelerators? Client feedback?
+        </p>
+        <label>
+          <input type="radio" name="q8" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q8" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q8" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q8" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q8" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q8" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q8" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q8" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q8" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q8" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Team<br>
+          Criterion: Product-Market-Founder Fit<br>
+          Comment: Is it the right product being built for the right market by the right people?
+        </p>
+        <label>
+          <input type="radio" name="q9" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q9" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q9" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q9" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q9" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q9" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q9" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q9" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q9" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q9" value="10"> 10
+        </label>
+      </form>
+
+      <form>
+        <p>
+          Category: Team<br>
+          Criterion: Presentation<br>
+          Comment: The quality of the pitch presentation and respose to questions. Did the pitch cover all aspects?
+        </p>
+        <label>
+          <input type="radio" name="q10" value="1"> 1
+        </label>
+        <label>
+          <input type="radio" name="q10" value="2"> 2
+        </label>
+        <label>
+          <input type="radio" name="q10" value="3"> 3
+        </label>
+        <label>
+          <input type="radio" name="q10" value="4"> 4
+        </label>
+        <label>
+          <input type="radio" name="q10" value="5"> 5
+        </label>
+        <label>
+          <input type="radio" name="q10" value="6"> 6
+        </label>
+        <label>
+          <input type="radio" name="q10" value="7"> 7
+        </label>
+        <label>
+          <input type="radio" name="q10" value="8"> 8
+        </label>
+        <label>
+          <input type="radio" name="q10" value="9"> 9
+        </label>
+        <label>
+          <input type="radio" name="q10" value="10"> 10
+        </label>
+      </form>
+      <br>
+      <div class="submition">
+        <input type="submit" value="Submit" onclick="onSubmitForm();">
+      </div>
+    </form>
+</body>
+</html>

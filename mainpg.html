@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mainpg.css" />
+  <title>Home Page</title>
+
+  <script>
+    function Give_Score() 
+    {
+      document.forms[0].submit();
+    }
+  </script>
+
+</head>
+<body>
+  <header>
+    <img class="left-logo" src="cyseck.jpg" alt="Left Logo">
+    <img class="left-logo1" src="ktech.jpg" alt="Right Logo">
+    <h1><a href="#" style="color: white;"> . </a></h1>
+    <img  class="center-logo" src="hack.jpg" alt="center Logo">
+    <img class="right-logo" src="kscst.jpg" alt="Right Logo">
+    <img class="right-logo1" src="iisc.jpg" alt="Right Logo">
+  </header>
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://identy.io/img/id_logo.png" alt="Card Image">
+          <p style="margin-top: 25%;">Touchless ID Private Limited</p>
+        </div>
+        <div class="card-back">
+          <img src="https://identy.io/img/id_logo.png" alt="Logo">
+          
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">Touchless ID offers various touchless mobile biometrics solutions to identify users remotely and securely using patented AI technologies and mobile phone cameras. Built on technologies like
+              artificial intelligence, neuro networks and computer vision algorithms, all in context of contactless biometrics. IDENTITY TM is one of their key product currently.
+            </marquee>
+          </div></p>
+          
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="Touchless ID offers various touchless mobile biometrics solutions
+            to identify users remotely and securely using patented AI
+            technologies and mobile phone cameras. Built on technologies like
+            artificial intelligence, neuro networks and computer vision
+            algorithms, all in context of contactless biometrics. IDENTITY TM is
+            one of their key product currently.">
+            <button onclick="Give_score()" name="Team" value="Touchless ID Private Limited">Evaluate</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-color: aquamarine;">
+          <img style="margin-top: auto;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAg0AAABeCAMAAACXQ9fWAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABLUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////9JyxnAAAAAYdFJOUwBA788ggJ9gv99QEJBwH49/MK+gb7BfwNiaQiEAAATnSURBVHja7d1be6MgEAZgQFTw0ETb3eX//9K92u6TRJDDTGTozHVDJb5VPgoqRgdWvfgue/wTRpyXOf6offqx/OO21uy3VYaOQWc3rqwxt1XOAD2ML7AzKH6ehu+DWTW8hn/V3SRroKTBOWdGLA3OOTtq1kBJg3N2QtPgnB1ZAykNzt1mNA3OWc0aSGk4OmMarvGNNZDScMABToNTG2sgpcHZGU/DAQfWULUGNyBqeLXGGurW4CSiBndjDbQ0WEwNz9ZYQ+Ua3IipwbAGWhoMpgY3swZSGh6v5tAaetZAS8OCqaFjDbQ0WEwN7oM1kNLwcG8H1zCyBloaJkwNCxENekypLvIP4DoNvf/g18UEjn6N0PAn0Hi/q8iBw7s0dGNqpf3aKdb/dRqCK9yE/oyandaRM9hPtXo9qCs0GIFaWsWOm2vVIEQfc/yZGsSmYkYlbWjQNjQm1zQ0iD0iVORqEGtMqGhDQ2jQoB7XCFSsQXqHUAAahIo4rCY03GJH5HVr8B0bjIYl4vtpQcM9fuq1bg2f57f2fA1jxIRDAxqi4wRZDR8QGqYfoSE+TlSvocfUIH+ChoQ4wRqa15AQJ1hD6xpS4gRraFxDUpxgDW1rSIsTrKFpDYlxgjW0rCE1TrCGljWkxgnW0LCG5DjBGtrVkB4nWEMtGpyNqhUzTrCGajTEVY8ZJ1hDoxqy4gRraFRDVpzg/2i3qSEvTlSvwWCudllb1XAvaKJmDQpzJdxe0bpISA25caJ2Db47u4LQoFWbGrLjRO0abESfsjV4r6cfpDXkx4m6NcyDi5i5y9Xgv7kK0hry40TNGubJj7x85530b/NUpDUUxImLNZjBW3twT3HMrlwbajx0azWUNdxLRx0Ed+zLCA3ZtRDWUBQnqGpAfZrHRFdDWZwgquHh0DQmNVoaCuMEUQ0rpgYjyGoojBNENWhMDSNZDaVxgqYG3KeHaqoaiuMETQ2oTxYexCUabB9VEjNOkNSA+9RxfY2G4nWRAHGCpAaNqaEXNDVAxAmKGp7Pl0a87tDRABEnCGp4OSxIDa9/REQ0gMQJehq6GVHDwRWVhgaYOEFOw/76QkyNiYGGBqA4QUyDOtpcAqZhmQVNDVBxgpaG4XA0BKTByJIeXqkBLE4Q0qB6T78gNKhdlvXwSg1gcYKIBmUCk3DFGrplmkt7eKEGuDhxsYbOnNQ+DP06hX1rL6GzGoZlHbcZoofXaQCMExdrkAKg8vdTCLgeXqYBMk6wBuIaQONESEOX/1HW8CYNsHEidEoVXNdYA5IG2DgRbPL8XEnWcKkG4DgR6nDE1+nbC/WLNbxDA3ScEEL4n5Hgfp988Ct2LMsaMDTI4CRK0vvztv+tLt4m1zwML59rT4NKfF2hPNNg09+AiPN21ECrdpX6uKa7jb9ltachf1UG2BlE0rA56NpYA1kNMzSGl2zKGuhogOqxN1KwBkoaemANI2sgrEECa9CsgbCG4ARnSc9ZA0UNPe6NgjWQ0jArQAwH03SsgZIG0IvDyBqIawAcORydBNZAS8MGda84XGLBGmhpgGr6eIkFayCmwftA9jQMm2ANLWgQ0uLcJlgDRQ1Cf5a26duawBroaSjzoBb/qkzWQFGDEHrM675ZQ1uWWAOGhrfUPC0mZfrB7qF9jFwtlN6klCcr8yYpteav6qL6C56ij+ND+d2+AAAAAElFTkSuQmCC" alt="Card Image">
+          <p style="margin-top: 50%;">Zupple</p>
+        </div>
+        <div class="card-back">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAg0AAABeCAMAAACXQ9fWAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABLUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////9JyxnAAAAAYdFJOUwBA788ggJ9gv99QEJBwH49/MK+gb7BfwNiaQiEAAATnSURBVHja7d1be6MgEAZgQFTw0ETb3eX//9K92u6TRJDDTGTozHVDJb5VPgoqRgdWvfgue/wTRpyXOf6offqx/OO21uy3VYaOQWc3rqwxt1XOAD2ML7AzKH6ehu+DWTW8hn/V3SRroKTBOWdGLA3OOTtq1kBJg3N2QtPgnB1ZAykNzt1mNA3OWc0aSGk4OmMarvGNNZDScMABToNTG2sgpcHZGU/DAQfWULUGNyBqeLXGGurW4CSiBndjDbQ0WEwNz9ZYQ+Ua3IipwbAGWhoMpgY3swZSGh6v5tAaetZAS8OCqaFjDbQ0WEwN7oM1kNLwcG8H1zCyBloaJkwNCxENekypLvIP4DoNvf/g18UEjn6N0PAn0Hi/q8iBw7s0dGNqpf3aKdb/dRqCK9yE/oyandaRM9hPtXo9qCs0GIFaWsWOm2vVIEQfc/yZGsSmYkYlbWjQNjQm1zQ0iD0iVORqEGtMqGhDQ2jQoB7XCFSsQXqHUAAahIo4rCY03GJH5HVr8B0bjIYl4vtpQcM9fuq1bg2f57f2fA1jxIRDAxqi4wRZDR8QGqYfoSE+TlSvocfUIH+ChoQ4wRqa15AQJ1hD6xpS4gRraFxDUpxgDW1rSIsTrKFpDYlxgjW0rCE1TrCGljWkxgnW0LCG5DjBGtrVkB4nWEMtGpyNqhUzTrCGajTEVY8ZJ1hDoxqy4gRraFRDVpzg/2i3qSEvTlSvwWCudllb1XAvaKJmDQpzJdxe0bpISA25caJ2Db47u4LQoFWbGrLjRO0abESfsjV4r6cfpDXkx4m6NcyDi5i5y9Xgv7kK0hry40TNGubJj7x85530b/NUpDUUxImLNZjBW3twT3HMrlwbajx0azWUNdxLRx0Ed+zLCA3ZtRDWUBQnqGpAfZrHRFdDWZwgquHh0DQmNVoaCuMEUQ0rpgYjyGoojBNENWhMDSNZDaVxgqYG3KeHaqoaiuMETQ2oTxYexCUabB9VEjNOkNSA+9RxfY2G4nWRAHGCpAaNqaEXNDVAxAmKGp7Pl0a87tDRABEnCGp4OSxIDa9/REQ0gMQJehq6GVHDwRWVhgaYOEFOw/76QkyNiYGGBqA4QUyDOtpcAqZhmQVNDVBxgpaG4XA0BKTByJIeXqkBLE4Q0qB6T78gNKhdlvXwSg1gcYKIBmUCk3DFGrplmkt7eKEGuDhxsYbOnNQ+DP06hX1rL6GzGoZlHbcZoofXaQCMExdrkAKg8vdTCLgeXqYBMk6wBuIaQONESEOX/1HW8CYNsHEidEoVXNdYA5IG2DgRbPL8XEnWcKkG4DgR6nDE1+nbC/WLNbxDA3ScEEL4n5Hgfp988Ct2LMsaMDTI4CRK0vvztv+tLt4m1zwML59rT4NKfF2hPNNg09+AiPN21ECrdpX6uKa7jb9ltachf1UG2BlE0rA56NpYA1kNMzSGl2zKGuhogOqxN1KwBkoaemANI2sgrEECa9CsgbCG4ARnSc9ZA0UNPe6NgjWQ0jArQAwH03SsgZIG0IvDyBqIawAcORydBNZAS8MGda84XGLBGmhpgGr6eIkFayCmwftA9jQMm2ANLWgQ0uLcJlgDRQ1Cf5a26duawBroaSjzoBb/qkzWQFGDEHrM675ZQ1uWWAOGhrfUPC0mZfrB7qF9jFwtlN6klCcr8yYpteav6qL6C56ij+ND+d2+AAAAAElFTkSuQmCC" alt="Logo">
+          
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">Zupple Labs Private Limited, specializes in developing blockchain
+              applications. Compamy's primary offering is LegitDoc, a platform
+              for authenticating documents using blockchain technology.
+              LegitDoc has gained significant adoption by Indian governments
+              and enterprises. To date, they have successfully issued
+              approximately 2.4 million tamperproof credentials, primarily in the
+              government sector in India.
+              Zupple's ultimate vision is to digitize India's credential issuance
+              process, enabling quick verification within 10 seconds from any
+              location worldwide.
+            </marquee>
+          </div></p>
+          
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="TZupple Labs Private Limited, specializes in developing blockchain
+            applications. Compamy's primary offering is LegitDoc, a platform
+            for authenticating documents using blockchain technology.
+            LegitDoc has gained significant adoption by Indian governments
+            and enterprises. To date, they have successfully issued
+            approximately 2.4 million tamperproof credentials, primarily in the
+            government sector in India.
+            Zupple's ultimate vision is to digitize India's credential issuance
+            process, enabling quick verification within 10 seconds from any
+            location worldwide.">
+            <button onclick="Give_score()" name="Team" value="Zupple Labs Pvt Ltd">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="http://wrixte.co/wp-content/uploads/2023/01/Wrixtebluefinallogo.png" alt="Card Image">
+          <p style="margin-top: 50%;">Wrixte Infosec Pvt Ltd</p>
+        </div>
+        <div class="card-back">
+          <img src="http://wrixte.co/wp-content/uploads/2023/01/Wrixtebluefinallogo.png" alt="Logo">
+          
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">Wrixte revolutionizes cybersecurity with its advanced technology
+              automating cyber threat hunting and incident response. Their
+              cutting- edge Wrixte SOC Suite, powered by dual AI algorithms,
+              leads the charge against real-time cyber threats. By employing
+              machine learning techniques, the suite analyzes vast amounts of
+              data to detect emerging threats swiftly. Wrixte's platform excels in
+              automating incident response, eliminating manual investigation and
+              speeding up mitigation while ensuring consistency and efficiency.
+              Moreover, Wrixte is developing a generative AI platform to
+              automate day-to-day SOC operations, freeing up security teams for
+              strategic tasks. With these AI-driven solutions, Wrixte empowers
+              organizations to proactively defend against evolving
+              cyber threats and enhance their cybersecurity posture.
+            </marquee>
+          </div></p>
+          
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="Wrixte revolutionizes cybersecurity with its advanced technology
+            automating cyber threat hunting and incident response. Their
+            cutting- edge Wrixte SOC Suite, powered by dual AI algorithms,
+            leads the charge against real-time cyber threats. By employing
+            machine learning techniques, the suite analyzes vast amounts of
+            data to detect emerging threats swiftly. Wrixte's platform excels in
+            automating incident response, eliminating manual investigation and
+            speeding up mitigation while ensuring consistency and efficiency.
+            Moreover, Wrixte is developing a generative AI platform to
+            automate day-to-day SOC operations, freeing up security teams for
+            strategic tasks. With these AI-driven solutions, Wrixte empowers
+            organizations to proactively defend against evolving
+            cyber threats and enhance their cybersecurity posture.">
+            <button onclick="Give_score()" name="Team" value="Wrixte Infosec Pvt Ltd">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://cyberstanc.com/wp-content/uploads/2020/03/favicon-1.png" alt="Card Image">
+          <p style="margin-top: 10%;">Cyberstanc Corp</p>
+        </div>
+        <div class="card-back">
+          <img style="max-height: 43%; max-width: 43%;" src="https://cyberstanc.com/wp-content/uploads/2020/03/favicon-1.png" alt="Logo">
+          
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">Cyberstanc is a tech-driven company countering zero-day
+              malware, ransomware, and pre-attack suspicious behaviour using
+              New-Age anti- malware (Scrutiny) and anti-sandbox (Swatbox).
+              Introducing Vortex, the ultimate platform for SOC teams, Threat
+              Hunters, and Researchers. Gain access to its comprehensive tools
+              for 30 days with a freemium offer.
+              Additionally, Vortex presents a co-build opportunity to collaborate
+              with team in shaping the future of cybersecurity technology.
+            </marquee>
+          </div></p>
+          
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="Cyberstanc is a tech-driven company countering zero-day
+            malware, ransomware, and pre-attack suspicious behaviour using
+            New-Age anti- malware (Scrutiny) and anti-sandbox (Swatbox).
+            Introducing Vortex, the ultimate platform for SOC teams, Threat
+            Hunters, and Researchers. Gain access to its comprehensive tools
+            for 30 days with a freemium offer.
+            Additionally, Vortex presents a co-build opportunity to collaborate
+            with team in shaping the future of cybersecurity technology.">
+            <button onclick="Give_score()" name="Team" value="CyberStanc Corp">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div style="background-color: black;" class="card-front">
+          <img style="background-color: black; margin-top: auto;" src="https://reinfosec.com/wp-content/uploads/2021/04/logo4.png" alt="Card Image">
+          <p style="color: white; margin-top: 25%;">Reverse Engineering Infosec Private Limited</p>
+        </div>
+        <div class="card-back">
+          <img src="https://reinfosec.com/wp-content/uploads/2021/04/logo4.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">WReinfosec is a global provider of end-to-end Information Security
+              Services, Robust Solutions and Technology Products to clients in
+              various industry verticals. Reinfosec offers unmatched expertise in
+              Vulnerability Assessment, Auditing, Risk Management, and
+              Compliance
+              space. Reinfosec helps clients secure their most critical assets
+              (Business Data, IT Systems and Applications, Network and Skill
+              Competence) and operate business in the most secure
+              environment. The company is also a pioneer in Hardware / IOT
+              security.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="WReinfosec is a global provider of end-to-end Information Security
+            Services, Robust Solutions and Technology Products to clients in
+            various industry verticals. Reinfosec offers unmatched expertise in
+            Vulnerability Assessment, Auditing, Risk Management, and
+            Compliance
+            space. Reinfosec helps clients secure their most critical assets
+            (Business Data, IT Systems and Applications, Network and Skill
+            Competence) and operate business in the most secure
+            environment. The company is also a pioneer in Hardware / IOT
+            security.">
+            <button onclick="Give_score()" name="Team" value="Reverse Engineering Infosec Private Limited">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://telcosolve.com/wp-content/uploads/2021/12/cropped-cropped-telco-footer.png" alt="Card Image">
+          <p style="margin-top: 25%;">TelcoSolve Systems Private Limited</p>
+        </div>
+        <div class="card-back">
+          <img src="https://telcosolve.com/wp-content/uploads/2021/12/cropped-cropped-telco-footer.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">TelcoSolve® is a cutting-edge startup poised to revolutionize the
+              telecommunications industry. With over 20 years of employee
+              industry expertise & a 360-degree understanding of the sector's
+              requirements, they deliver tailored Solutions to global telecom
+              operators, equipment vendors, IT/ITES vendors, and 3PP vendors.
+              They focus on Telecom DataCenter, Network & Security
+              Operations Center Modernization Projects that benefit every
+              industry segment.With foray into Cybersecurity, ensures protection
+              & integrity of our clients' digital ecosystems.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="TelcoSolve® is a cutting-edge startup poised to revolutionize the
+            telecommunications industry. With over 20 years of employee
+            industry expertise & a 360-degree understanding of the sector's
+            requirements, they deliver tailored Solutions to global telecom
+            operators, equipment vendors, IT/ITES vendors, and 3PP vendors.
+            They focus on Telecom DataCenter, Network & Security
+            Operations Center Modernization Projects that benefit every
+            industry segment.With foray into Cybersecurity, ensures protection
+            & integrity of our clients' digital ecosystems.">
+            <button onclick="Give_score()" name="Team" value="TelcoSolve Systems Private Limited">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://d1pnnwteuly8z3.cloudfront.net/images/cdb2447d-2230-4230-a32e-310b9a2dd499/9615ceb9-a391-43d3-bae2-231c0c2e45a5.png" alt="Card Image">
+          <p style="margin-top: 25%;">ClearTrust(Botman Networks Private Ltd)</p>
+        </div>
+        <div class="card-back">
+          <img src="https://d1pnnwteuly8z3.cloudfront.net/images/cdb2447d-2230-4230-a32e-310b9a2dd499/9615ceb9-a391-43d3-bae2-231c0c2e45a5.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">ClearTrust is a modern fraud detection platform helping AdOps and
+              Media Buying teams combat AdFraud/Invalid Traffic and gains a
+              better understanding of their traffic. ClearTrust’s highly accurate
+              signals can be integrated into any platform. They detect Invalid
+              Traffic (IVT) with 99% accuracy, even in cases involving incognito,
+              VPNs, and cookie blocking.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="ClearTrust is a modern fraud detection platform helping AdOps and
+            Media Buying teams combat AdFraud/Invalid Traffic and gains a
+            better understanding of their traffic. ClearTrust’s highly accurate
+            signals can be integrated into any platform. They detect Invalid
+            Traffic (IVT) with 99% accuracy, even in cases involving incognito,
+            VPNs, and cookie blocking.">
+            <button onclick="Give_score()" name="Team" value="ClearTrust(Botman Networks Private Ltd)">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div style="background-color: black;" class="card-front">
+          <img style="margin-top: auto;" src="https://securedapp.io/static/media/logoblacktextsdlogowhite-1@2x.53eda1d22556001891e3.png" alt="Card Image">
+          <p style="color: white; margin-top: 25%;">SecureDApp(Vettedcode Technologies India Private Limited)</p>
+        </div>
+        <div class="card-back">
+          <img src="https://securedapp.io/static/media/logoblacktextsdlogowhite-1@2x.53eda1d22556001891e3.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">WSecureDApp, specializes in providing top-notch blockchain security
+              solutions for companies operating in the Web 3.0 space. Their
+              expertise lies in conducting comprehensive smart contract audits to
+              identify vulnerabilities and enhance the overall security of your
+              blockchain network. With a strong dteam of experienced
+              professionals and cutting- edge tools, you can rest assured that
+              your blockchain ecosystem is secure and future-proof. SecureDApp
+              has successfully launched Solidity Shield, an AI-powered bot to
+              detect the vulnerabilities in the smart contract. It has analysed/
+              scanned more than 50+ contracts and has saved USD 20+ Million
+              of funds,within three months of its launch.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="WSecureDApp, specializes in providing top-notch blockchain security
+            solutions for companies operating in the Web 3.0 space. Their
+            expertise lies in conducting comprehensive smart contract audits to
+            identify vulnerabilities and enhance the overall security of your
+            blockchain network. With a strong dteam of experienced
+            professionals and cutting- edge tools, you can rest assured that
+            your blockchain ecosystem is secure and future-proof. SecureDApp
+            has successfully launched Solidity Shield, an AI-powered bot to
+            detect the vulnerabilities in the smart contract. It has analysed/
+            scanned more than 50+ contracts and has saved USD 20+ Million
+            of funds,within three months of its launch.">
+            <button onclick="Give_score()" name="Team" value="SecureDApp(Vettedcode Technologies India Private Limited)">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://detasecure.com/_next/image?url=%2Fassets%2Flogo.webp&w=1080&q=75" alt="Card Image">
+          <p style="margin-top: 25%;">DeTaSecure Pvt Ltd</p>
+        </div>
+        <div class="card-back">
+          <img src="https://detasecure.com/_next/image?url=%2Fassets%2Flogo.webp&w=1080&q=75" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">DeTaSECURE is a leading cybersecurity company that helps
+              businesses of all sizes protect their data and systems from
+              cyberattacks. We offer a comprehensive range of services,
+              including Web2 and Web3 security audits, data breach discovery
+              services, B2B SaaS security products, and security training and
+              awareness programs.
+              We also have built a SaaS product called https://getsecured.ai and
+              a data breach discovery platform called
+              https://scan.detasecure.com that helps small & medium enterprises
+              (SMEs) and startups to do automated audit and risk discovery at an
+              affordable cost.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value=" DeTaSECURE is a leading cybersecurity company that helps
+            businesses of all sizes protect their data and systems from
+            cyberattacks. We offer a comprehensive range of services,
+            including Web2 and Web3 security audits, data breach discovery
+            services, B2B SaaS security products, and security training and
+            awareness programs.
+            We also have built a SaaS product called https://getsecured.ai and
+            a data breach discovery platform called
+            https://scan.detasecure.com that helps small & medium enterprises
+            (SMEs) and startups to do automated audit and risk discovery at an
+            affordable cost.">
+            <button onclick="Give_score()" name="Team" value="DeTaSecure Pvt Ltd">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://www.simunainfosec.com/img/logo1.png" alt="Card Image">
+          <p style="margin-top: 25%;">Simuna Infosec Pvt Ltd</p>
+        </div>
+        <div class="card-back">
+          <img src="https://www.simunainfosec.com/img/logo1.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">Simuna Infosec is a global information security company
+              incorporated in Bangalore in the year 2018, was founded by a
+              group of four industry experts to nullify the prevailing challenges
+              faced by organisations in conducting information security
+              assessments particularly security testing (VAPT). The team claims
+              that their reports simple and understandable while also being
+              comprehensive. Team runs with a strong beliefthat their
+              capabilities will help organizations to be secured by,
+              Delaying cyber attacks to a great extent & Detecting and quickly
+              responding to cyber attacks.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="Simuna Infosec is a global information security company
+            incorporated in Bangalore in the year 2018, was founded by a
+            group of four industry experts to nullify the prevailing challenges
+            faced by organisations in conducting information security
+            assessments particularly security testing (VAPT). The team claims
+            that their reports simple and understandable while also being
+            comprehensive. Team runs with a strong beliefthat their
+            capabilities will help organizations to be secured by,
+            Delaying cyber attacks to a great extent & Detecting and quickly
+            responding to cyber attacks.">
+            <button onclick="Give_score()" name="Team" value="Simuna Infosec Pvt Ltd">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img style="margin-top: auto;" src="https://static.wixstatic.com/media/8d30d8_449dfa9a358240348dddcf37afdee96d~mv2.png/v1/fill/w_144,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/AAAA%20LOGO_edited.png alt="Card Image">
+          <p style="margin-top: 25%;">Agamya Cyber Tech</p>
+        </div>
+        <div class="card-back">
+          <img src="https://static.wixstatic.com/media/8d30d8_449dfa9a358240348dddcf37afdee96d~mv2.png/v1/fill/w_144,h_115,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/AAAA%20LOGO_edited.png" alt="Logo">
+          <p><div style="width: 200px; height: 100px; overflow: hidden;" class="scrolling-text">
+            <marquee direction="up" scrollamount="4" behavior="scroll">WAgamya Cyber Tech is working to create a new area where
+              equality will exist to allow intelligence to succeed. With belief in
+              “Smart Security for Smart People”, they provide VAPT Audits, IS
+              Audit, ISO 27001:2022, ISO 9001:2015 Audits, Cloud, IoT Security,
+              Corporate Training as a core services. As a third party, they also
+              provide training to the Karnataka Police Department & Data
+              recovery and cyber-crime investigation.
+            </marquee>
+          </div></p>
+          <form method="get" action="qpg.html">
+            <input type="hidden" name="info" value="WAgamya Cyber Tech is working to create a new area where
+            equality will exist to allow intelligence to succeed. With belief in
+            “Smart Security for Smart People”, they provide VAPT Audits, IS
+            Audit, ISO 27001:2022, ISO 9001:2015 Audits, Cloud, IoT Security,
+            Corporate Training as a core services. As a third party, they also
+            provide training to the Karnataka Police Department & Data
+            recovery and cyber-crime investigation.">
+            <button onclick="Give_score()" name="Team" value="Agamya Cyber Tech">Evaluate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
+
+

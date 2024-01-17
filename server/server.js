@@ -1,9 +1,19 @@
 // Import the express library here
 const express = require('express');
 const cors = require('cors');
+const {Client} = require('pg');
 // Instantiate the app here
 const app = express();
 
+const client = new Client({
+  host: "localhost",
+  user: "postgres",
+  port: 5432,
+  password: "password",
+  database: "postgres"
+})
+
+client.connect();
 app.use(cors());
 
 const PORT = process.env.PORT || 4001;
@@ -16,10 +26,20 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/Submit', (req, res, next) => {
-    let judgeName = req.query.judgename;
+    let judgeName = Number(req.query.judgename);
     let teamName = req.query.teamname;
-    let sum = req.query.sum;
-    res.json({ judgeName : judgeName, teamName : teamName, sum : sum});
+    let sum = Number(req.query.sum);
+    client.query(`INSERT INTO users (judgename, teamname, score) VALUES ($1, $2, $3);`,
+    [judgeName,teamName,sum],(err, ret)=>{
+    if(!err){
+      res.json({error: 'no errors'});
+    }
+    else{
+      res.json({error: err.message});
+    }
+    
+  })
+    
 });
 
 // Invoke the app's .listen() method below:

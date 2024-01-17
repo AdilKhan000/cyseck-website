@@ -16,10 +16,10 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/Submit', (req, res, next) => {
-    let judgeName = req. query.judgeName;
-    let teamName = req. query.teamName;
-    let sum = req. query.sum;
-    req.send(judgeName + teamName + sum);
+    let judgeName = req.query.judgename;
+    let teamName = req.query.teamname;
+    let sum = req.query.sum;
+    res.json({ judgeName : judgeName, teamName : teamName, sum : sum});
 });
 
 // Invoke the app's .listen() method below:

@@ -42,18 +42,18 @@
           console.log("Judge Name:", judgeName);
           console.log("Team Name:", teamName);
           console.log("SUM:", sum);
-          submit();
+          submit(judgeName, teamName, sum);
 
         }
-        const submit = async () => {
+        const submit = async (judgeName, teamName, sum) => {
           try{
-            const response = await fetch('http://localhost:4001/submit?', {cache: 'no-cache'});
+            const response = await fetch(`http://localhost:4001/submit?judgename=${judgeName}&teamname=${teamName}&sum=${sum}`, {cache: 'no-cache'});
             if(response.ok){
               const jsonResponse = await response.json();
-              renderResponse(jsonResponse);
+              console.log(jsonResponse);
             }
           }catch(error){
-            console.log(error)
+            console.log(error);
           }
         }
         function getRadioValue(name) {
@@ -72,23 +72,23 @@
         <label for="Panel members name" style="font-size: 25px;">Panel member name:</label>
       <select name="judges" id="judges">
         <option value="-1">Select a Panel Member</option>
-        <option value="1">Sridar Sindhu-CISO, Wells Fargo</option>
-        <option value="2">Visagan Subbarayalu-Sr.Director, Target</option>
-        <option value="3">Seshadri PS-VP, Unisys</option>
-        <option value="4">Hilal Ahmad Lone-CISO, Razorpay</option>
-        <option value="5">KPM Das-Sr.Director, Cisco</option>
-        <option value="6">Athir Ahad-CISO, Wipro</option>
-        <option value="7">JPM Raman-CISO, NA</option>
-        <option value="8">Satish K-CISO, KreditBee</option>
-        <option value="9">Kannan K-CISO, Karnataka Bank</option>
-        <option value="10">Sridhar Govardhan-CISO, COINDCX</option>
-        <option value="11">Sachinraj Shetty-CISO, OLA</option>
-        <option value="12">Venkat Thoutam-CISO, DELL India</option>
-        <option value="13">Kavita Kadambi-CISO, Infosys</option>
-        <option value="14">Dr. Ram Kumar G-CISO, Nissan Motors</option>
-        <option value="15">Shobha Jagatpal-CISO, Morgan Stanley</option>
-        <option value="16">Jacxine Fernandez-CISO, Bangalore intl Airport</option>
-        <option value="17">Mahadesha V-CISO, CeG & Karnataka State</option>
+        <option value="Sridar Sindhu-CISO, Wells Fargo">Sridar Sindhu-CISO, Wells Fargo</option>
+        <option value="Visagan Subbarayalu-Sr.Director, Target">Visagan Subbarayalu-Sr.Director, Target</option>
+        <option value="Seshadri PS-VP, Unisys">Seshadri PS-VP, Unisys</option>
+        <option value="Hilal Ahmad Lone-CISO, Razorpay">Hilal Ahmad Lone-CISO, Razorpay</option>
+        <option value="KPM Das-Sr.Director, Cisco">KPM Das-Sr.Director, Cisco</option>
+        <option value="Athir Ahad-CISO, Wipro">Athir Ahad-CISO, Wipro</option>
+        <option value="JPM Raman-CISO">JPM Raman-CISO, NA</option>
+        <option value="Satish K-CISO, KreditBee">Satish K-CISO, KreditBee</option>
+        <option value="Kannan K-CISO, Karnataka Bank">Kannan K-CISO, Karnataka Bank</option>
+        <option value="Sridhar Govardhan-CISO, COINDCX">Sridhar Govardhan-CISO, COINDCX</option>
+        <option value="Sachinraj Shetty-CISO, OLA">Sachinraj Shetty-CISO, OLA</option>
+        <option value="Venkat Thoutam-CISO, DELL India">Venkat Thoutam-CISO, DELL India</option>
+        <option value="Kavita Kadambi-CISO, Infosys">Kavita Kadambi-CISO, Infosys</option>
+        <option value="Dr. Ram Kumar G-CISO, Nissan Motors">Dr. Ram Kumar G-CISO, Nissan Motors</option>
+        <option value="Shobha Jagatpal-CISO, Morgan Stanley">Shobha Jagatpal-CISO, Morgan Stanley</option>
+        <option value="Jacxine Fernandez-CISO, Bangalore intl Airport">Jacxine Fernandez-CISO, Bangalore intl Airport</option>
+        <option value="Mahadesha V-CISO, CeG & Karnataka State">Mahadesha V-CISO, CeG & Karnataka State</option>
       </select>
       <br><br>
       <form >

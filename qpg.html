@@ -56,6 +56,16 @@
             console.log(error);
           }
         }
+        // Example using the Fetch API to make a GET request
+        fetch('http://localhost:4001/retrieve')
+          .then(response => response.json())
+          .then(data => {
+            console.log('Retrieved Data:', data);
+            // Handle the retrieved data as needed
+          })
+          .catch(error => console.error('Error:', error));
+
+
         function getRadioValue(name) {
             var radios = document.getElementsByName(name);
             for (var i = 0; i < radios.length; i++) {
@@ -74,21 +84,21 @@
         <option value="-1">Select a Panel Member</option>
         <option value= 3>Sridar Sindhu-CISO, Wells Fargo</option>
         <option value= 5>Visagan Subbarayalu-Sr.Director, Target</option>
-        <option value="Seshadri PS-VP, Unisys">Seshadri PS-VP, Unisys</option>
-        <option value="Hilal Ahmad Lone-CISO, Razorpay">Hilal Ahmad Lone-CISO, Razorpay</option>
-        <option value="KPM Das-Sr.Director, Cisco">KPM Das-Sr.Director, Cisco</option>
-        <option value="Athir Ahad-CISO, Wipro">Athir Ahad-CISO, Wipro</option>
+        <option value="Seshadri PS-VP">Seshadri PS-VP, Unisys</option>
+        <option value="Hilal Ahmad Lone-CISO">Hilal Ahmad Lone-CISO, Razorpay</option>
+        <option value="KPM Das-Sr.Director">KPM Das-Sr.Director, Cisco</option>
+        <option value="Athir Ahad-CISO">Athir Ahad-CISO, Wipro</option>
         <option value="JPM Raman-CISO">JPM Raman-CISO, NA</option>
         <option value="Satish K-CISO, KreditBee">Satish K-CISO, KreditBee</option>
-        <option value="Kannan K-CISO, Karnataka Bank">Kannan K-CISO, Karnataka Bank</option>
-        <option value="Sridhar Govardhan-CISO, COINDCX">Sridhar Govardhan-CISO, COINDCX</option>
-        <option value="Sachinraj Shetty-CISO, OLA">Sachinraj Shetty-CISO, OLA</option>
-        <option value="Venkat Thoutam-CISO, DELL India">Venkat Thoutam-CISO, DELL India</option>
-        <option value="Kavita Kadambi-CISO, Infosys">Kavita Kadambi-CISO, Infosys</option>
-        <option value="Dr. Ram Kumar G-CISO, Nissan Motors">Dr. Ram Kumar G-CISO, Nissan Motors</option>
-        <option value="Shobha Jagatpal-CISO, Morgan Stanley">Shobha Jagatpal-CISO, Morgan Stanley</option>
-        <option value="Jacxine Fernandez-CISO, Bangalore intl Airport">Jacxine Fernandez-CISO, Bangalore intl Airport</option>
-        <option value="Mahadesha V-CISO, CeG & Karnataka State">Mahadesha V-CISO, CeG & Karnataka State</option>
+        <option value="Kannan K-CISO">Kannan K-CISO, Karnataka Bank</option>
+        <option value="Sridhar Govardhan-CISO">Sridhar Govardhan-CISO, COINDCX</option>
+        <option value="Sachinraj Shetty-CISO">Sachinraj Shetty-CISO, OLA</option>
+        <option value="Venkat Thoutam-CISO">Venkat Thoutam-CISO, DELL India</option>
+        <option value="Kavita Kadambi-CISO">Kavita Kadambi-CISO, Infosys</option>
+        <option value="Dr. Ram Kumar G-CISO">Dr. Ram Kumar G-CISO, Nissan Motors</option>
+        <option value="Shobha Jagatpal-CISO">Shobha Jagatpal-CISO, Morgan Stanley</option>
+        <option value="Jacxine Fernandez-CISO">Jacxine Fernandez-CISO, Bangalore intl Airport</option>
+        <option value="Mahadesha V-CISO">Mahadesha V-CISO, CeG & Karnataka State</option>
       </select>
       <br><br>
       <form >

@@ -26,7 +26,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/Submit', (req, res, next) => {
-    let judgeName = Number(req.query.judgename);
+    let judgeName = req.query.judgename;
     let teamName = req.query.teamname;
     let sum = Number(req.query.sum);
     client.query(`INSERT INTO users (judgename, teamname, score) VALUES ($1, $2, $3);`,
@@ -40,6 +40,15 @@ app.get('/Submit', (req, res, next) => {
     
   })
     
+});
+app.get('/retrieve', async (req, res, next) => {
+  try {
+    const response = await client.query('SELECT * FROM users');
+    const data = response.rows;
+    res.json(data);
+  } catch (error) {
+    res.json({ error: error.message });
+  }
 });
 
 // Invoke the app's .listen() method below:

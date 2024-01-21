@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Retrieved Data</title>
+</head>
+<body style="text-align: center;">
+    <table border="1" align="center" id="dataTable">
+        <thead>
+            <tr>
+                <th>Judge Name</th>
+                <th>Team Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    
+
+<script>
+fetch('http://localhost:4001/retrieve')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Zupple Labs Pvt Ltd");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve1')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Wrixte Infosec Pvt Ltd");
+    })
+    .catch(error => console.error('Error:', error));
+    
+fetch('http://localhost:4001/retrieve2')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Cyberstanc Corp");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve3')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Reverse Engineering Infosec Private Limited");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve4')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "TelcoSolve Systems Private Limited");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve5')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "ClearTrust(Botman Networks Private Ltd)");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve6')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "SecureDApp(Vettedcode Technologies India Private Limited)");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve7')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "DeTaSecure Pvt Ltd");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve8')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Simuna Infosec Pvt Ltd");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve9')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Agamya Cyber Tech");
+    })
+    .catch(error => console.error('Error:', error));
+fetch('http://localhost:4001/retrieve10')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Retrieved Data:', data);
+        displayDataWithSum(data, "Touchless ID Private Limited");
+    })
+    .catch(error => console.error('Error:', error));
+
+        function displayDataWithSum(data, companyName) {
+        var tableBody = document.getElementById("tableBody");
+        var sum = 0;
+        var columns = ['judgename', 'teamname', 'score'];
+
+        data.forEach(function (row) {
+            var tr = document.createElement("tr");
+            sum = sum + row['score'];
+
+            columns.forEach(function (column) {
+                var td = document.createElement("td");
+                td.textContent = row[column];
+                tr.appendChild(td);
+            });
+            tableBody.appendChild(tr);
+        });
+
+        console.log(sum);
+
+        // Create a new row for the total score
+        var totalRow = document.createElement("tr");
+        var totalScoreCell = document.createElement("td");
+        totalScoreCell.colSpan = columns.length; // Span the total score cell across all columns
+        totalScoreCell.textContent = companyName+" Total Score: " + sum;
+        totalRow.appendChild(totalScoreCell);
+        
+        // Append the new total score row to the existing table body
+        tableBody.appendChild(totalRow);
+    }
+
+</script>
+
+</body>
+
+</html>

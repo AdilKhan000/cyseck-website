@@ -192,3 +192,14 @@ input[type="hidden"]
 {
   font-size: 25px;
 }
+
+#button1{
+  display: flex;
+  justify-content: center;
+}
+#button12{
+  height: 50px;
+  width: 100px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
